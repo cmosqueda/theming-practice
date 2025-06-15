@@ -90,7 +90,7 @@ export default function Explore() {
         </div>
 
         {/* LIGHT cards */}
-        <div className="my-5 box w-11/12 rounded-4xl">
+        <div className="my-5 box border-8 w-11/12 rounded-4xl">
           <p className="text-5xl my-10 uppercase font-black text-center">Cards - Theme Opposite</p>
 
           {/* CARD CONTAINER */}
