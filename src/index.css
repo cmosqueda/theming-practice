@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #89b6ff;
+  --color-secondary: #f59e0b;
+  --color-bg: #fefefe;
+  --color-fg: #1f2937;
+  --radius-md: 0.5rem;
+}
+
+@layer base {
+  /* Base theme (light) */
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    --color-primary: #3b82f6;
+    --color-primary-hover: #89b6ff;
+    --color-secondary: #f59e0b;
+    --color-bg: #ffffff;
+    --color-fg: #1f2937;
+  }
+
+  /* Dark theme */
+  [data-theme="dark"] {
+    --color-primary: #60a5fa;
+    --color-primary-hover: #328eff;
+    --color-secondary: #facc15;
+    --color-bg: #1f2937;
+    --color-fg: #fefefe;
+  }
+
+  /* Ocean theme */
+  [data-theme="ocean"] {
+    --color-primary: #0ea5e9;
+    --color-primary-hover: #37c0ff;
+    --color-secondary: #06b6d4;
+    --color-bg: #e0f2fe;
+    --color-fg: #0c4a6e;
+  }
+
+  /* Pink theme */
+  [data-theme="pink"] {
+    --color-primary: #ec4899;
+    --color-primary-hover: #f472b6;
+    --color-secondary: #f9a8d4;
+    --color-bg: #fff1f5;
+    --color-fg: #831843;
+  }
+}
+
+@layer components {
+  .box {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  .boxopposite {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors duration-100 cursor-pointer;
+    background-color: var(--color-primary);
+    color: var(--color-fg);
+    border-radius: var(--radius-md);
+  }
+
+  .btn:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .card {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    border-radius: var(--radius-md);
+    @apply shadow p-6;
+  }
+
+  .cardopposite {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+    border-radius: var(--radius-md);
+    @apply shadow p-6;
+  }
+
+  .txt {
+    color: var(--color-fg);
+  }
+
+  .txtopposite {
+    color: var(--color-bg);
+  }
+}
